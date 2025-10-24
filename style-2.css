@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Bebas Neue", sans-serif;
+    background-color: #000;
+    color: #f00;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+    background: url("logo2.svg") no-repeat center;
+    background-size: contain;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    background-color: #000;
+    color: #f00;
+}
+
+header blockquote {
+    justify-self: center;
+    font-style: italic;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 16px;
+}
+
+header nav {
+    justify-self: end;
+    padding-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f00;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+#about,
+#flota,
+#towar,
+#rejsy {
+    width: 80%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+
+p,
+dl {
+    margin-top: 10px;
+    margin-bottom: 18px;
+}
+
+#rozmiarPhoto{
+    width: 100%;
+    border: 1px solid #f00;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#mainPhoto {
+    display: none;
+}
+
+#flota {
+    display: flex;
+    flex-direction: column;
+}
+
+#flota h2,
+#flota h3,
+#flota p {
+    order: 1;
+}
+
+#rozmiarPhoto{
+    order: 2;
+}
+
+#rozmiarPhoto {
+    height: 240px;
+    margin-top: 20px;
+    background-image: url("ochrona.jpg");
+}
+
+#ladunkiPhoto {
+    display: none;
+}
+
+#rejsy {
+    width: 70%;
+    max-width: 900px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    text-align: justify;
+}
+
+#rejsy h2,
+#rejsy h3 {
+    text-align: center;
+}
+
+#rejsy dl {
+    margin-top: 16px;
+}
+
+#rejsy dt {
+    font-weight: 700;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 6px;
+}
+
+#rejsy dd {
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+footer {
+    border-top: 1px solid #f00;
+    width: 100%;
+    background-color: #000;
+    text-align: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-top: 80px;
+}
+
+#footer-content {
+    width: 80%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#towar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "title title"
+        "h3left h3right"
+        "pleft pright";
+    gap: 24px 48px;
+    width: 70%;
+    max-width: 1000px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #111;
+    border: 1px solid #f00;
+    border-radius: 10px;
+    padding: 24px;
+}
+
+#towar .title {
+    grid-area: title;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+#towar .h3-left {
+    grid-area: h3left;
+    text-align: center;
+    align-self: center;
+}
+
+#towar .p-left {
+    grid-area: pleft;
+}
+
+#towar .h3-right {
+    grid-area: h3right;
+    text-align: center;
+    align-self: center;
+}
+
+#towar .p-right,
+#towar .p3-right {
+    grid-area: pright;
+}
+
+#towar h3 {
+    font-size: 24px;
+}
+@media (max-width: 700px) {
+    header {
+        grid-template-columns: 1fr;
+        height: auto;
+        row-gap: 12px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        width: 94%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #logo {
+        justify-self: center;
+        width: 60px;
+        height: 60px;
+        background: url("logo2.svg") no-repeat center;
+        background-size: contain;
+    }
+
+    header blockquote {
+        font-size: 18px;
+        white-space: normal;
+        width: 94%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    header nav {
+        justify-self: center;
+        width: 94%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        width: 100%;
+    }
+
+    nav a {
+        text-align: center;
+        width: 100%;
+    }
+
+    #about,
+    #flota,
+    #towar,
+    #rejsy,
+    footer,
+    #footer-content {
+        width: 94%;
+        max-width: 94%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    h1 {
+        font-size: 38px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    p,
+    dl {
+        text-align: center;
+    }
+
+    #towar {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "h3left"
+            "pleft"
+            "h3right"
+            "pright";
+        gap: 12px;
+        border-radius: 8px;
+        padding: 16px;
+    }
+
+
+    #rejsy {
+        width: 94%;
+        max-width: 94%;
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+}
+
+
