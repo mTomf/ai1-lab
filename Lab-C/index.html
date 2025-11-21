@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LAB-C PUZZLE</title>
+    <link rel="stylesheet" href="leaflet-1.7.1/leaflet.css">
+
+    <script src="leaflet-1.7.1/leaflet.js"></script>
+    <script src="leaflet-1.7.1/leaflet-providers.js"></script>
+    <script src="leaflet-1.7.1/leaflet-image.js"></script>
+    <script src="script.js" defer></script>
+
+    <style>
+        body { font-family: Arial, Helvetica, sans-serif; margin: 12px; }
+        #container { display: flex; gap: 16px; align-items: flex-start; }
+        #left { width: 640px; }
+        #map { width: 640px; height: 480px; border: 1px solid #ccc; }
+        .controls { margin-top: 8px; display:flex; gap:8px; flex-wrap:wrap }
+        button { padding:8px 12px; cursor:pointer }
+        #info { margin-top:8px; font-size:14px }
+
+
+        #right { display:flex; flex-direction:column; gap:8px }
+        #slots { display:grid; grid-template-columns: repeat(4, 120px); gap:5px; }
+        .slot { width:120px; height:90px; border:2px dashed #aaa; display:flex; align-items:center; justify-content:center; background:#f8f8f8 }
+        .slot.correct { border:2px solid #4caf50; background: #e8f5e9 }
+        #stol { margin-top:12px; width: 100%; min-height:120px; display:flex; flex-wrap:wrap; gap:8px; align-items:flex-start; background:#fafafa; padding:8px; border:1px solid #eee }
+        .tile { width:120px; height:90px; object-fit:cover; border:1px solid #ccc; box-sizing:border-box; cursor:grab }
+        .hidden { display:none }
+        #message { margin-top:8px; font-weight:600 }
+    </style>
+</head>
+<body>
+<h2>LAB-C PUZZLE</h2>
+<div id="container">
+    <div id="left">
+        <div id="map"></div>
+        <div class="controls">
+            <button id="btn-loc">Moja lokalizacja</button>
+            <button id="btn-save">Pobierz mapę</button>
+        </div>
+        <div id="info">
+            <div><strong>Szerokość:</strong> <span id="lat">-</span></div>
+            <div><strong>Długość:</strong> <span id="lon">-</span></div>
+        </div>
+    </div>
+
+
+    <div id="right">
+        <div><strong>Do ułożenia:</strong></div>
+        <div id="slots"></div>
+        <div id="message"></div>
+        <div style="margin-top:8px"><strong>Stół z puzzlami:</strong></div>
+        <div id="stol"></div>
+    </div>
+</div>
+</body>
+</html>
