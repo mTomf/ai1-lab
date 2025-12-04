@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB D - Prognoza pogody</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<div class="container" id="weather-container">
+    <header class="header">
+        <form id="search-form" class="search-form">
+            <input type="text" id="city-input" class="search-bar" placeholder="Wpisz nazwę miasta...">
+            <button type="submit" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </header>
+
+    <main class="weather-content">
+        <div class="today-weather">
+            <div class="main-info">
+                <div>
+                    <h2 id="city-name">--</h2>
+                    <p id="today-desc">--</p>
+                </div>
+                <div class="temp-today" id="today-temp">--°</div>
+            </div>
+
+            <div class="weather-details">
+                <div class="detail-item">
+                    <i class="fa-solid fa-temperature-arrow-up"></i>
+                    <span id="max-temp">--°</span>
+                    <small>Max</small>
+                </div>
+                <div class="detail-item">
+                    <i class="fa-solid fa-temperature-arrow-down"></i>
+                    <span id="min-temp">--°</span>
+                    <small>Min</small>
+                </div>
+                <div class="detail-item">
+                    <i class="fa-solid fa-wind"></i>
+                    <span id="wind-speed">-- km/h</span>
+                    <small>Wiatr</small>
+                </div>
+                <div class="detail-item">
+                    <i class="fa-solid fa-droplet"></i>
+                    <span id="humidity">--%</span>
+                    <small>Wilgotność</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="forecast" id="forecast-container"></div>
+    </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
